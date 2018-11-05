@@ -6,7 +6,7 @@ Project title: Visualizing Imperial British Trade
 Name: Christopher Kinsey
 Email: toph.kinsey@gmail.com
 A#: 01784086
-Repository: 
+Repository: https://github.com/tophski/gb-trade-vis
 
 ## Background and Motivation
 
@@ -26,13 +26,26 @@ The provided datasets have statistics covering every pair of countries 1948 - 20
 
 ## Visualization Design
 
+Uploaded soon
+
 ## Must-Have Features
 
-The primary visualization will be an interactive map centered on Great Britain that shows its trade links, as well as the strength and direction of those links. It will also show whether countries are colonized or independent. Clicking on a country will open up detailed statistics for that country's trade relationship with Great Britain.
+### Map
+- Azimuthal projection map filtered to only fully draw major colonies and former colonies within continents.
+- Weighted Arrows connecting countries with GB.
+- Big timeline on map to select year.
+- Click to select countries
+
+### Detail Panel
+- Country name and flag
+- 3-letter iso country code for 3 main trading partners with darkened flag behind, change by year.
+- Linked year slider, shaded to show relationship to GB. Dark red for trade deficit, white for neutral, dark blue for trade surplus.
+- Population, GDP, colony status, etc. according to year.
+- Non-year specific info. Dates colonized and freed, type of separation, etc.
 
 ## Optional Featuers
-
-Time permitting, I will add componenets to the visualizations that also highlight how former colonies trade with other countries as they gain their independence. This would be useful to give a better idea of how countries develop away from their former colonial masters, and whether or not there was a long-term positive impact on the independent economy due to colonial development.
+- Change arrows to show full trade data for selected country, and filter out others.
+- Additional color coding on the big map timeline, showing relative 'strength' of the British Empire.
 
 ## Project Schedule
 
