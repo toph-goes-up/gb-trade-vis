@@ -26,7 +26,10 @@ The provided datasets have statistics covering every pair of countries 1948 - 20
 
 ## Visualization Design
 
-Uploaded soon
+![design page 1](./design1.png)
+![design page 2](./design2.png)
+![design page 3](./design3.png)
+![final design page](./desginfinal.png)
 
 ## Must-Have Features
 
