@@ -1,0 +1,16 @@
+
+#container{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+
+#map-view{
+    display: flex;
+    flex-basis: 900px;
+}
+
+#details{
+    display: flex;
+    flex-grow: 1;
+}

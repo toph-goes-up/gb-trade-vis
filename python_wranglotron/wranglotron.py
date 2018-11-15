@@ -46,5 +46,5 @@ def get_flow_hist(data):
 if __name__ == "__main__":
     data = pd.read_stata("../data/col_regfile09.dta")
     gha_to_gbr = get_ghana_to_gbr(data)
-    plt.hist(gha_to_gbr)
+    plt.plot(gha_to_gbr)
     plt.show()
