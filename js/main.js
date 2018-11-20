@@ -17,7 +17,6 @@ $('document').ready(()=>{
 
         window.dataSet = dNested;
         window.map = new Map();
-        console.log(map);
         d3.json("data/world.json").then(world =>{
             map.draw(world)
         })

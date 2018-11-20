@@ -45,8 +45,13 @@ def get_flow_hist(data):
 
 if __name__ == "__main__":
     data = pd.read_stata("../data/col_regfile09.dta")
+<<<<<<< HEAD
     gha_to_gbr = filter_from_to(data, "GHA", "GBR")
     gbr_to_gha = filter_from_to(data, "GBR", "GHA")
-    a = len(gha_to_gbr)
+    a = range(len(gha_to_gbr))
     plt.plot(a, gha_to_gbr["flow"], a, gbr_to_gha["flow"])
+=======
+    gha_to_gbr = get_ghana_to_gbr(data)
+    plt.plot(gha_to_gbr)
+>>>>>>> fe6ea3778acc126281bf3adfa841565581c8d862
     plt.show()
