@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <title>Visualizing the economic impact of decolonization</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
 </head>
 <body>
 <div id="container">
     <div id="map-view">
         <svg width="900" height="600">
-            <g id="map"></g>
+            <g id="map">
+                <g id="colonies"></g>
+                <g id="continents"></g>
+            </g>
             <g id="legend"></g>
             <g id="features"></g>
         </svg>
