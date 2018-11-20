@@ -23,9 +23,9 @@ def make_family_gbr(data, save = False):
 def make_filtered(data, save = False):
     pass
 
-def get_ghana_to_gbr(data, save = False):
-    f1 = data["iso_o"] == "GHA"
-    f2 = data["iso_d"] == "GBR"
+def filter_from_to(data, origin, dest, save = False):
+    f1 = data["iso_o"] == origin
+    f2 = data["iso_d"] == dest
     f3 = f1 & f2
     subset = data[f3]
     if save:
@@ -45,6 +45,8 @@ def get_flow_hist(data):
 
 if __name__ == "__main__":
     data = pd.read_stata("../data/col_regfile09.dta")
-    gha_to_gbr = get_ghana_to_gbr(data)
-    plt.plot(gha_to_gbr)
+    gha_to_gbr = filter_from_to(data, "GHA", "GBR")
+    gbr_to_gha = filter_from_to(data, "GBR", "GHA")
+    a = range(len(gha_to_gbr))
+    plt.plot(a, gha_to_gbr["flow"], a, gbr_to_gha["flow"])
     plt.show()
