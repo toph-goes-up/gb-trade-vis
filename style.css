@@ -2,12 +2,11 @@
 #container{
     display: flex;
     flex-direction: row;
-    height: 800px;
 }
 
 #map-view{
     display: flex;
-    flex-basis: 900px;
+    flex-basis: 960px;
 }
 
 #details{
@@ -30,4 +29,28 @@
 
 .colony{
     fill: black;
+    stroke: none;
+}
+
+.colony-hover{
+    fill: blue;
+    stroke: blue;
+    stroke-width: 1px;
+}
+
+.colony-selected{
+    fill: red;
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.trade-arcs{
+    fill: transparent;
+    stroke: rgba(160, 160, 160, .8);
+    stroke-width: 2px;
+    pointer-events: stroke;
+}
+
+.arc-hover{
+    stroke: blue;
 }
