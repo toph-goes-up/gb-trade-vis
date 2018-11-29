@@ -77,3 +77,7 @@ Processing the data is as simple as writing a few Python utilities to extract th
 ## Design Evolution
 
 I've decided to not use an Azimutal projection. I think that the idea of the circular world with Great Britain at the center told the story very well, but the edge distortion turned out to be a problem. Azimuthal Projections have more distortion away from the center, and Inida, one of the biggest colonial stories of Great Britain, is almost on the opposite side of the world, so it turns out extremely distorted. Right now, I'm using the Natural Earth projection rotated to be cnetered on Great Britain. This has less distortion, though it does give Africa a questionable shape.
+
+## Additional Data
+
+I needed a list of country centroids to draw arcs from colonies to Great Britain. I found this in CSV format at http://worldmap.harvard.edu/data/geonode:country_centroids_az8.

@@ -14,10 +14,25 @@ def make_from_gbr(data, save = False):
         subset.to_csv("../data/from_gbr.csv")
     return subset
 
+#TODO: fix this hideous filter
 def make_family_gbr(data, save = False):
-    subset = data[data["family"] == "GBR"]
+    family = data[data["family"] == "GBR"]
+    f1 = family["sever"] >= 1947
+    f2 = family["indepdate"] >= 1947
+    f3 = f1 | f2
+    subset = family[f3]
+    
+    isos = subset.iso_o.unique()
+    np.append(isos, "GBR")
+
+    f1 = family.iso_d.isin(isos)
+    f2 = family.iso_o.isin(isos)
+    f3 = f1 | f2
+
+    subset = family[f3]
+
     if save:
-        subset.to_csv("../data/family_gbr.csv")
+        subset.to_csv("../data/gbr_family.csv")
     return subset
 
 def make_filtered(data, save = False):
@@ -45,8 +60,9 @@ def get_flow_hist(data):
 
 if __name__ == "__main__":
     data = pd.read_stata("../data/col_regfile09.dta")
-    gha_to_gbr = filter_from_to(data, "GHA", "GBR")
-    gbr_to_gha = filter_from_to(data, "GBR", "GHA")
-    a = range(len(gha_to_gbr))
-    plt.plot(a, gha_to_gbr["flow"], a, gbr_to_gha["flow"])
-    plt.show()
+    #gha_to_gbr = filter_from_to(data, "GHA", "GBR")
+    #gbr_to_gha = filter_from_to(data, "GBR", "GHA")
+    #a = range(len(gha_to_gbr))
+    #plt.plot(a, gha_to_gbr["flow"], a, gbr_to_gha["flow"])
+    #plt.show()
+    make_family_gbr(data, True)
