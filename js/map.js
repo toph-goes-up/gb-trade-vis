@@ -95,7 +95,7 @@ class Map {
                 .append("path")
                 .attr('id', d => {return d.id + "-arc"})
                 .attr('d', this.geoGen)
-                .classed("trade-arcs", true)
+                .classed("trade-arc", true)
                 .on("mouseover", this.handleMouseOver)
                 .on("mouseout", this.handleMouseOut)
                 .on("click", this.selectColony);
@@ -116,9 +116,10 @@ class Map {
 
     // Select the clicked colony.
     selectColony(d, i) {
-        console.log(d.id)
+        console.log(d.id);
         let toggled = !d3.select("#" + d.id).classed("colony-selected");
         d3.selectAll(".colony").classed("colony-selected", false);
+        d3.selectAll(".trade-arc").classed("colony-selected", false);
         d3.select("#" + d.id).classed("colony-selected", toggled);
     }
 

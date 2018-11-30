@@ -27,7 +27,7 @@ def make_family_gbr(data, save = False):
 
     f1 = family.iso_d.isin(isos)
     f2 = family.iso_o.isin(isos)
-    f3 = f1 | f2
+    f3 = f1 & f2
 
     subset = family[f3]
 

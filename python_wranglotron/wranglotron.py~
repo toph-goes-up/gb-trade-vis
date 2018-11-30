@@ -14,6 +14,7 @@ def make_from_gbr(data, save = False):
         subset.to_csv("../data/from_gbr.csv")
     return subset
 
+#TODO: fix this hideous filter
 def make_family_gbr(data, save = False):
     family = data[data["family"] == "GBR"]
     f1 = family["sever"] >= 1947

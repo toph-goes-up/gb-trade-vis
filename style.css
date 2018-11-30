@@ -18,7 +18,7 @@
     stroke: gray;
     fill: transparent;
     stroke-width: 1px;
-    opacity: .4;
+    opacity: .1;
 }
 
 .continent{
@@ -44,13 +44,13 @@
     stroke-width: 2px;
 }
 
-.trade-arcs{
+.trade-arc{
     fill: transparent;
-    stroke: rgba(160, 160, 160, .8);
+    stroke: rgba(255, 127, 80, .7);
     stroke-width: 2px;
     pointer-events: stroke;
 }
 
 .arc-hover{
-    stroke: coral;
+    stroke: blue;
 }
