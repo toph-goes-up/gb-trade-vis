@@ -1,11 +1,14 @@
-# Proposal
-
-## Basic Info
+# Visualizing Independence
+# Process Book
 
 Project title: Visualizing Independence
+
 Name: Christopher Kinsey
+
 Email: toph.kinsey@gmail.com
+
 A#: 01784086
+
 Repository: https://github.com/tophski/gb-trade-vis
 
 ## Background and Motivation
