@@ -29,7 +29,7 @@ The provided datasets have statistics covering every pair of countries 1948 - 20
 ![design page 1](./design1.png)
 ![design page 2](./design2.png)
 ![design page 3](./design3.png)
-![final design page](./desginfinal.png)
+![final design page](./designfinal.png)
 
 ## Must-Have Features
 
@@ -81,3 +81,7 @@ I've decided to not use an Azimutal projection. I think that the idea of the cir
 ## Additional Data
 
 I needed a list of country centroids to draw arcs from colonies to Great Britain. I found this in CSV format at http://worldmap.harvard.edu/data/geonode:country_centroids_az8.
+
+The main dataset identified countries with ISO country codes. I downloaded a csv file to lookup full country names and 2-letter country codes from the ISO at https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes.
+
+I needed small images of all country flags. I found them at https://github.com/hjnilsson/country-flags.

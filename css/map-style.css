@@ -1,0 +1,68 @@
+#map-view{
+    display: flex;
+    flex-basis: 960px;
+    flex-direction: column;
+    border: black 1px solid;
+}
+
+#big-year{
+    display: flex;
+    align-self: center;
+    font-size: 72pt;
+    font-style: italic;
+}
+
+#grat{
+    stroke: gray;
+    fill: transparent;
+    stroke-width: 1px;
+    opacity: .15;
+}
+
+.continent{
+    fill: rgba(255, 255, 255, 1);
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.colony{
+    fill: black;
+    stroke: none;
+}
+
+.current-colony{
+    fill: darkred;
+    stroke: darkred;
+    stroke-width: 2px;
+}
+
+.colony-hover{
+    fill: #6a7dff;
+    stroke: blue;
+    stroke-width: 2px;
+}
+
+.colony-selected{
+    fill: blue;
+    stroke: blue;
+    stroke-width: 2px;
+}
+
+.trade-arc{
+    fill: transparent;
+    stroke: rgba(155, 155, 155, .8);
+    stroke-width: 2px;
+    pointer-events: stroke;
+}
+
+.arc-hover{
+    stroke: rgba(100, 100, 255, .6);
+}
+
+.arc-selected{
+    stroke: rgba(100, 100, 255, .8);
+}
+
+#globe-path{
+    fill: rgba(155, 191, 244, 0.6);
+}

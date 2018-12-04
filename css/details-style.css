@@ -1,0 +1,123 @@
+#details{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    border: black 1px solid;
+}
+
+#spacer{
+    display: flex;
+    flex-grow: 1;
+}
+
+#trade-timeline{
+    display: flex;
+    align-self: center;
+    border: black 1px solid;
+}
+
+#timeline-svg{
+    stroke: black;
+    stroke-width: 3px;
+    fill: url(#area-gradient)
+}
+
+#year-line{
+    stroke-width: 3px;
+}
+
+#indep-line{
+    stroke: gold;
+    stroke-width: 5px;
+}
+
+#timeline-y-axis{
+    stroke-width: 1px;
+}
+
+#title-bar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#title-country{
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 40px;
+}
+
+#title-flag{
+    position: absolute;
+    width: 100px;
+    margin-left: 12px;
+    border: 1px black solid;
+}
+
+#partners{
+    width: 80%;
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#partners div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#partners span{
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    text-align: center;
+    font-size: 21pt;
+    color: white;
+}
+
+#partners img{
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.info-boxes{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info-boxes div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 110px;
+    font-size: 16pt;
+    border: 1px solid black;
+}
+
+.info-boxes div span{
+    height: 1.2em;
+}
+
+.info-boxes div label{
+    border-top: 1px solid black;
+    background-color: white;
+}
+
+.info-boxes div *{
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+    height: 1px;
+    width: 100%;
+    background: black;
+}

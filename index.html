@@ -2,33 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Visualizing the economic impact of decolonization</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Visualizing Independence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map-style.css">
+    <link rel="stylesheet" href="css/details-style.css">
+    <Style type='text/css' >body{background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/beige_parchment_paper_background_1800x1600.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:fixed;}</Style>
     <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/iso-converter.js"></script>
 </head>
 <body>
 <div id="container">
     <div id="map-view">
-        <svg width="960" height="495">
+        <svg width="960" height="500">
             <g id="map">
                 <g id="globe"></g>
                 <g id="grat"></g>
                 <g id="continents"></g>
                 <g id="colonies"></g>
-            </g>
-            <g id="features">
                 <g id="trade-arcs"></g>
             </g>
-            <g id="legend"></g>
+            <g id="legend">
+            </g>
         </svg>
+        <svg id="slider"></svg>
+        <div id="big-year">1948</div>
     </div>
 
     <div id="details">
-        <h1 id="country-title">Country</h1>
+
+        <div id="title-bar">
+            <img id="title-flag" src="">
+            <h1 id="title-country">Country</h1>
+        </div>
+
+        <hr>
+
+        <h2>TOP TRADING PARTNERS</h2>
+        <div id="partners">
+            <div id="partner0"><span></span><img src=""></div>
+            <div id="partner1"><span></span><img src=""></div>
+            <div id="partner2"><span></span><img src=""></div>
+        </div>
+
+        <div id="country-info" class="info-boxes">
+            <div title="GDP in USD"><span id="gdp"></span><label>GDP</label></div>
+            <div title="Population"><span id="pop"></span><label>POP</label></div>
+            <div title="GDP per capita in USD"><span id="gdpcap"></span><label>GDP/CAP</label></div>
+        </div>
+
+        <div id="additional-info" class="info-boxes">
+            <div title="Year this country gained independence"><span id="indep-date"></span><label>INDEP</label></div>
+            <div title="Is this country currently a colony of GBR?"><span id="col-cur"></span><label>COLONY</label></div>
+            <div title="Trade flow as a ratio of the trade flow between FRA and GBR. Watch about video for details."><span id="trade-plus-minus"></span><label>TRADE +/-</label></div>
+        </div>
+
+        <div id="spacer"></div>
+
+        <div id="trade-timeline">
+            <svg width="600" height="200" id="timeline-svg">
+                <path id="timeline-chart"></path>
+                <line id="indep-line"></line>
+                <line id="year-line"></line>
+                <linearGradient id="area-gradient" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="20%"  stop-color="rgba(80, 80, 255, .5)"/>
+                    <stop offset="100%"  stop-color="rgba(180, 125, 200, .5)"/>
+                </linearGradient>
+            </svg>
+        </div>
     </div>
 </div>
 </body>

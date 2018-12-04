@@ -14,15 +14,37 @@ def make_from_gbr(data, save = False):
         subset.to_csv("../data/from_gbr.csv")
     return subset
 
-#TODO: fix this hideous filter
-def make_family_gbr(data, save = False):
+def get_colony_isos(data):
     family = data[data["family"] == "GBR"]
     f1 = family["sever"] >= 1947
     f2 = family["indepdate"] >= 1947
     f3 = f1 | f2
     subset = family[f3]
-    
     isos = subset.iso_o.unique()
+    return isos
+
+
+# Make csv of extended trading networks.
+# This is used to find the primary trading partners of a country
+# in a specified year.
+def make_extended_trading(data, save = False):
+    isos = get_colony_isos(data)
+    
+    f1 = data.iso_d.isin(isos)
+    f2 = data.iso_o.isin(isos)
+    f3 = f1 | f2
+
+    subset = data[f3]
+
+    if save:
+        subset.to_csv("../data/extended_trading.csv")
+    return subset
+    
+# Make csv of the primary colonies that will be used in the visualization.
+# This is the main dataset for the project.
+def make_primary_colonies(data, save = False):
+    family = data[data["family"] == "GBR"]
+    isos = get_colony_isos(data)
     np.append(isos, "GBR")
 
     f1 = family.iso_d.isin(isos)
@@ -32,7 +54,7 @@ def make_family_gbr(data, save = False):
     subset = family[f3]
 
     if save:
-        subset.to_csv("../data/gbr_family.csv")
+        subset.to_csv("../data/primary_colonies.csv")
     return subset
 
 def make_filtered(data, save = False):
@@ -65,4 +87,5 @@ if __name__ == "__main__":
     #a = range(len(gha_to_gbr))
     #plt.plot(a, gha_to_gbr["flow"], a, gbr_to_gha["flow"])
     #plt.show()
-    make_family_gbr(data, True)
+    make_primary_colonies(data, True)
+    make_extended_trading(data, True)
