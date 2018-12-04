@@ -55,7 +55,7 @@ class Timeline {
             .call(this.yAxis)
     }
 
-    getSurplus(){
+    getFlow(){
         if(this.data && this.year) {
             let a = this.data.find(o => {
                 return this.year.toString() === o.year

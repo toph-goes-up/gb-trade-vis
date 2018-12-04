@@ -86,11 +86,11 @@ class Details {
             .text(colCur);
 
         // What is the current trade totalFlow?
-        let surplus = window.timeline.getSurplus();
-        if (surplus !== null) surplus = d3.format(".5n")(surplus);
-        else surplus = "N/A";
-        d3.select("#trade-plus-minus")
-            .text(surplus)
+        let flow = window.timeline.getFlow();
+        if (flow !== null) flow = d3.format(".5n")(flow);
+        else flow = "N/A";
+        d3.select("#trade-flow")
+            .text(flow);
     }
 
     // Update the trading partners panel
