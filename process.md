@@ -1,8 +1,6 @@
 # Visualizing Independence
 # Process Book
 
-## Basic Info
-
 Project title: Visualizing Independence
 
 Name: Christopher Kinsey
