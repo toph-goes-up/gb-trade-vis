@@ -1,4 +1,5 @@
-# Proposal
+# Visualizing Independence
+# Process Book
 
 ## Basic Info
 
