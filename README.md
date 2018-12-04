@@ -7,6 +7,8 @@ Email: toph.kinsey@gmail.com
 
 Repository: https://github.com/tophski/gb-trade-vis
 
+Project site: https://tophski.github.io/gb-trade-vis/
+
 
 All code uploaded here is my own. Any external libraries (d3 for example) are sourced from a CDN. 
 

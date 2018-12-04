@@ -69,6 +69,8 @@ Nov 29: Clean everything up, make sure everything is presentable, and submit the
 
 # Checkpoint
 
+![Checkpoint](./visindcheckpoint.png)
+
 ## Exploring Data
 
 The dataset has 37 columns for each data point, containing information such as population, whether or not two countries share a common legal system, the distance between the countries, and more. The column headers for the data are not very descriptive, and the paper that accompanies the data does not do a very good job of documenting what the headers mean. Because of this, I've spent most of my time trying to interpret the dataset. 
