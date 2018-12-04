@@ -25,7 +25,7 @@ class Details {
 
         let imageurl = "./data/flags/" + window.isoConverter.alpha3ToAlpha2(country) + ".png";
         d3.select("#title-flag")
-            .attr("src", imageurl);
+            .attr("src", imageurl.toLowerCase());
 
         this.updatePartners();
         this.updateInfo();
@@ -109,7 +109,7 @@ class Details {
                 .text((i+1).toString() + ". " + partners[i]);
 
             flag.select("img")
-                .attr("src", imageurl)
+                .attr("src", imageurl.toLowerCase())
         }
     }
 
