@@ -9,6 +9,7 @@ Repository: https://github.com/tophski/gb-trade-vis
 
 Project site: https://tophski.github.io/gb-trade-vis/
 
+Original Study: https://doi.org/10.1016/j.jinteco.2010.01.002
 
 All code uploaded here is my own. Any external libraries (d3 for example) are sourced from a CDN. 
 
